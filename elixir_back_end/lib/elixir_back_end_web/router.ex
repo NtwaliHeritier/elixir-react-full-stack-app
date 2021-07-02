@@ -7,6 +7,7 @@ defmodule ElixirBackEndWeb.Router do
 
   scope "/api", ElixirBackEndWeb do
     pipe_through :api
+    get "/:id", ApiController, :show
   end
 
   # Enables LiveDashboard only for development
